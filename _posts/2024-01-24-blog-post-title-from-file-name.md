@@ -24,6 +24,8 @@ State the specific goals of your project. Explain why investigating GPT-4's imag
 - Highlight specific examples where GPT-4 failed or was inaccurate in its interpretation.
 - Use images and responses to illustrate these points.
 
+<img src="imgs/count_colors.png" height="480">
+
 ## Discussion
 Analyze why GPT-4 succeeded or failed in certain areas. Link these outcomes to the underlying technology and its current state.
 
@@ -33,4 +35,3 @@ Summarize the key findings of your investigation. Discuss the implications for A
 ## References
 
 - OpenAI et al. (2023). *GPT-4 Technical Report*. arXiv:2303.08774 [cs.CL]. Available at: [https://arxiv.org/abs/2303.08774](https://arxiv.org/abs/2303.08774)
-- tbd
