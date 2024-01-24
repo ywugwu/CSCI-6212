@@ -31,4 +31,6 @@ Analyze why GPT-4 succeeded or failed in certain areas. Link these outcomes to t
 Summarize the key findings of your investigation. Discuss the implications for AI development and future research directions.
 
 ## References
-List any references, sources, or further readings you used in your research.
+
+- OpenAI et al. (2023). *GPT-4 Technical Report*. arXiv:2303.08774 [cs.CL]. Available at: [https://arxiv.org/abs/2303.08774](https://arxiv.org/abs/2303.08774)
+- tbd
