@@ -7,7 +7,7 @@ The study uses a pre-trained ResNet-50 model [1], experimenting with different t
 
 The goal is to understand the model's robustness and limitations in classifying progressively corrupted images.
 
-Our code to reproduce the results is available at https://colab.research.google.com/drive/1W75c_YtBpNiKy2AndzwQ842Hh7fRzOHv?usp=sharing
+Our code to reproduce the results is available at [https://colab.research.google.com/drive/1W75c_YtBpNiKy2AndzwQ842Hh7fRzOHv?usp=sharing](https://colab.research.google.com/drive/1W75c_YtBpNiKy2AndzwQ842Hh7fRzOHv?usp=sharing)
 
 ## 2. Methodology
 ### a. Choice of Image Corruption
