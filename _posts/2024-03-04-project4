@@ -1,0 +1,76 @@
+# Rushing to the Top 3 in PlantTraits2024 - FGVC11 Competition
+
+## 1. Introduction
+
+This blog aims to provide a brief report of our approach in achieving the top 3 place in the PlantTraits2024 competition in a preliminary stage. 
+
+We intend to give an overview of our neural network model and one most significant data preprocessing method while omitting most messy technical details such as hyperparameter tuning, concrete data analysis/processing, model selection, etc.
+
+All results were obtained before 26 March thus, the leaderboard may change in the future.
+
+Our Progress:
+
+* 9th place on 3 March
+* 3rd place on 26 March (after competition host updated test set due to data leakage)
+
+The PlantTraits2024 Challenge, part of the FGVC11 workshop at CVPR 2024, provides 50,000 labeled images and also integrates ancillary geodata for predicting plant traits such as height, seed mass, leaf size, etc. Participants are expected to develop a robust multimodal neural network to solve this task.
+
+
+## 2. Overview of Our Method
+
+Our model comprises two main parts: a CLIP image encoder for feature extraction and a shallow MLP that combines the image feature with ancillary geodata for predictions.
+
+<img width="480" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/blob/main/_posts/imgs/Presentation1.png?raw=True">
+
+To improve our ranking, we applied several strategies common in machine learning competitions, including:
+
+* Out-of-fold (OOF) Prediction
+* Ensemble/Blending
+* Pseudo Label
+* Postprocessing via XGBoost, LightGBM and CatBoost
+* Extensive Data Analysis, Data Preprocessing and Feature Engineering
+
+We mention one impactful data preprocessing technique we employed is the log transformation:
+
+
+### Log Transformation
+
+We found that three labels (X18, X26, X3112) from a total of six do not follow a normal distribution:
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/a5d2a361-6bf1-4b68-a3e6-9db1fc5e6f65">
+
+Similarly, many ancillary features deviate from normal distribution:
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/c4c6bd60-83cb-4f2d-943c-d96a6c049e9c">
+
+This can be annoying because we want the data in and out of our neural network to follow some standard normal distribution (like what Batch Normalization [1] and Kaiming initialization [2] do).
+
+To address this issue, we applied a logarithmic transformation to non-normally distributed features,  **Namely, for each feature** $x$ **in the raw data that we identify as not normally distributed, we convert it to** $\log(x)$.
+
+This trick significantly improves those distribution towards normality, followed by standardization:
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/d2281971-f5f2-42bf-958e-f47c65f89a98">
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/58e73cfc-c8c4-449f-a275-3d8935cfcc21">
+
+Then, we split the training data into 5-fold and trained 5 i.i.d. models, which may give us both a robust cross-validation score and a natural ensemble of models (this is also called out-of-fold prediction).
+
+The whole training process took us about 10 hours on an RTX 4070Ti 12GB GPU and yielded a pretty decent result on the public leaderboard.
+
+## 3.Results
+
+
+**By 4 March, our approach achieved 9th place out of about 150 teams.**
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/4927c11a-fb6b-4a27-9ec3-f53fa213f108">
+
+**By 26 March, the competition host updated the test set due to data leakage. Our approach achieved 3rd place out of 38 teams after refreshing the leaderboard.**
+
+<img width="640" alt="image" src="https://github.com/ywugwu/ywugwu.github.io/assets/128890731/aad6cee3-d55d-4e19-9d50-0e686ff4ce96">
+
+**You may check the leaderboard at https://www.kaggle.com/competitions/planttraits2024/leaderboard**
+
+## 4.Reference 
+
+- [1] Santurkar, Shibani, et al. "How does batch normalization help optimization?." Advances in neural information processing systems 31 (2018).
+- [2] He, Kaiming, et al. "Delving deep into rectifiers: Surpassing human-level performance on imagenet classification." Proceedings of the IEEE international conference on computer vision. 2015.
