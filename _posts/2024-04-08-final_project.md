@@ -16,6 +16,33 @@ An example input consists of an image of a plant along with its corresponding ge
 
 ![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/21a71229-9772-4198-8d03-9f8712457f9c)
 
+## 2. Detailed Description of Approach
+
+### Two-Stage Predictive Framework
+
+Our method employs a two-stage predictive framework, integrating ConvNext and LightGBM to predict plant traits from images and auxiliary data.
+
+#### Stage 1: Initial Prediction with ConvNext
+
+The process begins with ConvNext [1], which is focused on generating an initial set of predictions for the plant traits using only image data. 
+
+#### Stage 2: Final Prediction with LightGBM
+
+In the second stage, we refine the initial predictions using the LightGBM [2] regressor. This machine learning model takes in the feature vectors from the ConvNext output, along with additional auxiliary data (climate, soil, satellite data), and the initial predictions. The goal here is to use the gradient boosting method of LightGBM to fine-tune the trait predictions.
+
+### Training Process: 5-Fold Cross-Validation
+
+We employ a 5-fold cross-validation strategy for training. In each fold:
+
+1. The neural network is trained on a specific subset of the data to produce image features and initial trait predictions.
+2. We hold back the network's predictions on the validation set as 'unseen data' to simulate the performance on new images.
+3. The LightGBM model is then trained on these predictions to bridge the gap between the seen training images and unseen validation images, aiming to prevent overfitting and ensure better model generalization.
+
+This method guarantees that the LightGBM model is not influenced by the exact images used to train the ConvNext network, thus addressing the potential issue of feature representation variability between training and unseen images.
+
+The combination of ConvNext and LightGBM leverages the respective advantages of deep learning for feature extraction and ensemble learning for prediction refinement, leading to improved accuracy in our plant trait predictions.
+
+
 ### High-Level Strategy
 Our approach combines a Convolutional Neural Network (CNN) using the CLIP architecture for image processing with a Multi-Layer Perceptron (MLP) that integrates image-derived features with geospatial data. This multimodal approach leverages the strengths of both data types to improve the accuracy of trait predictions.
 
