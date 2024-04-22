@@ -42,7 +42,7 @@ While our results are promising, further validation and scaling are required for
 ## 5. Tools and Resources
 
 - **Data Sources:** Directly from the FGVC11 competition dataset.
-- **Key Tools:** PyTorch for model building, Python for data preprocessing, and various libraries such as XGBoost for postprocessing.
+- **Key Tools:** PyTorch and LightGBM for model building
 - **Inspirational Sources:** Existing literature on multimodal learning and previous entries in similar Kaggle competitions provided foundational ideas for our approach.
 
 ## 6. References
