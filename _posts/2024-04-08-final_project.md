@@ -44,6 +44,14 @@ The combination of ConvNext and LightGBM leverages the respective advantages of 
 
 Our solution achieved the following milestones in the competition leaderboard:
 - 5th place out of 182 teams as of 22 Apr.
+ 
+
+| Model                        | R² Score |
+|------------------------------|----------|
+| ConvNext Only                | 0.34     |
+| ConvNext + LightGBM          | 0.41     |
+| Ensemble with Varied Params  | 0.44     |
+
 
 ### Comparison with Other Approaches
 Our use of CLIP for image processing, coupled with a robust handling of geospatial data, sets our approach apart from more traditional methods that might rely solely on image data. This integration allows for superior handling of the multimodal nature of the dataset.
