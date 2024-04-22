@@ -56,8 +56,10 @@ The combination of ConvNext and LightGBM leverages the respective advantages of 
 ### Leaderboard Ranking
 
 Our solution achieved the following milestones in the competition leaderboard:
-- 5th place out of 182 teams as of 22 Apr.
- 
+- 5th place out of 185 teams as of 22 Apr. (you may check the live ranking at [kaggle](https://www.kaggle.com/competitions/planttraits2024/leaderboard))
+
+ ![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/6970419f-6bb9-4fe1-8654-579cf20968a1)
+
 
 ### Comparison with Other Approaches
 Our use of CLIP for image processing, coupled with a robust handling of geospatial data, sets our approach apart from more traditional methods that might rely solely on image data. This integration allows for superior handling of the multimodal nature of the dataset.
