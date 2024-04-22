@@ -16,8 +16,6 @@ An example input consists of an image of a plant along with its corresponding ge
 
 ![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/21a71229-9772-4198-8d03-9f8712457f9c)
 
-## 2. Detailed Description of Approach
-
 ### Two-Stage Predictive Framework
 
 Our method employs a two-stage predictive framework, integrating ConvNext and LightGBM to predict plant traits from images and auxiliary data.
