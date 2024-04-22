@@ -40,19 +40,6 @@ This method guarantees that the LightGBM model is not influenced by the exact im
 
 The combination of ConvNext and LightGBM leverages the respective advantages of deep learning for feature extraction and ensemble learning for prediction refinement, leading to improved accuracy in our plant trait predictions.
 
-
-### High-Level Strategy
-Our approach combines a Convolutional Neural Network (CNN) using the CLIP architecture for image processing with a Multi-Layer Perceptron (MLP) that integrates image-derived features with geospatial data. This multimodal approach leverages the strengths of both data types to improve the accuracy of trait predictions.
-
-### Data Handling
-We utilized the provided dataset of 50,000 labeled images and corresponding geodata. Significant preprocessing included log transformations to address non-normal distribution of several features, enhancing model training efficiency.
-
-### Challenges and Solutions
-The integration of heterogeneous data types (images and geodata) presents alignment and scaling challenges. We addressed these by standardizing feature scales and employing batch normalization to stabilize the learning process.
-
-### Data Volume and Quality Issues
-We processed and used the entirety of the available dataset. Issues with data quality, particularly in geospatial measurements, were mitigated through data augmentation techniques and robust outlier detection.
-
 ## 4. Results and Evaluation
 
 Our solution achieved the following milestones in the competition leaderboard:
