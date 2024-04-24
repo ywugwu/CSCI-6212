@@ -16,15 +16,14 @@ An example input consists of an image of a plant along with its corresponding ge
 
 The table below presents statistical summaries for various plant trait measurements. Notably, the scale of the maximum values is significantly larger than the means, highlighting the wide range of the data. Also, the significantly high std values imply the challenge of predicting these traits accurately, as the models must be robust enough to handle such extremes without compromising performance on more typical values.
 
-
-| Target    | Minimum | 1st Percentile | 5th Percentile | 25th Percentile | Median | 75th Percentile | 95th Percentile | 99th Percentile | Maximum     |
-|-----------|---------|----------------|----------------|-----------------|--------|-----------------|-----------------|-----------------|-------------|
-| X4  | -1.16   | 0.23           | 0.30           | 0.41            | 0.51   | 0.62            | 0.80            | 0.91            | 2.62        |
-| X11 | 0.02    | 3.10           | 4.97           | 10.81           | 15.28  | 20.13           | 33.25           | 52.75           | 27167.64    |
-| X18  | 0.00    | 0.04           | 0.10           | 0.31            | 0.73   | 4.30            | 18.65           | 30.09           | 705177.70   |
-| X50  | 0.00    | 0.48           | 0.74           | 1.15            | 1.47   | 1.92            | 2.98            | 4.38            | 218.29      |
-| X26 | 0.00    | 0.01           | 0.05           | 0.58            | 2.65   | 16.84           | 257.58          | 1805.68         | 8920578.70  |
-| X3112| 0.00    | 12.38          | 44.42          | 265.27          | 793.31 | 2296.86         | 8871.99         | 25810.43        | 3145145.18  |
+| Target     | Minimum | 1st Percentile | 5th Percentile | 25th Percentile | Median | 75th Percentile | 95th Percentile | 99th Percentile | Maximum    | Standard Deviation |
+|------------|---------|----------------|----------------|-----------------|--------|-----------------|-----------------|-----------------|------------|---------------------|
+| X4    | -1.16   | 0.23           | 0.30           | 0.41            | 0.51   | 0.62            | 0.80            | 0.91            | 2.62       | 0.175               |
+| X11   | 0.02    | 3.10           | 4.97           | 10.81           | 15.28  | 20.13           | 33.25           | 52.75           | 27167.64   | 1.290179e+04        |
+| X18   | 0.00    | 0.04           | 0.10           | 0.31            | 0.73   | 4.30            | 18.65           | 30.09           | 705177.70  | 2.331357e+06        |
+| X50  | 0.00    | 0.48           | 0.74           | 1.15            | 1.47   | 1.92            | 2.98            | 4.38            | 218.29     | 1.369172e+03        |
+| X26  | 0.00    | 0.01           | 0.05           | 0.58            | 2.65   | 16.84           | 257.58          | 1805.68         | 8920578.70 | 2.110374e+05        |
+| X3112 | 0.00    | 12.38          | 44.42          | 265.27          | 793.31 | 2296.86         | 8871.99         | 25810.43        | 3145145.18 | 9.238101e+07        |
 
 
 
