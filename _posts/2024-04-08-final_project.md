@@ -12,7 +12,7 @@ Our project's goal is to predict specific plant traits based on a combination of
 ### Data Input and Output Examples
 An example input consists of an image of a plant along with its corresponding geodata such as location, altitude, and climate conditions. The output from our system is a set of traits for each plant, quantified, such as height and leaf area.
 
-### Challenges: 
+### Challenge 1: Data Distribution
 
 The table below presents statistical summaries for various plant trait measurements. Notably, the scale of the maximum values is significantly larger than the means, highlighting the wide range of the data. Also, the significantly high std values imply the challenge of predicting these traits accurately, as the models must be robust enough to handle such extremes without compromising performance on more typical values.
 
@@ -27,7 +27,7 @@ The table below presents statistical summaries for various plant trait measureme
 
 
 
-### Challenges: Implicit Requirement of Classification Ability
+### Challenge 2: Implicit Requirement of Classification Ability
 
 The examples depicted highlight a significant implicit challenge: the model must be capable of discerning species because the same species exhibit identical plant traits. The images show that objects such as a pine seed and a branch, although physically smaller, are labeled with the same height trait as full-grown pine trees. This implies that the model needs to understand context and classify the species accurately to make valid trait predictions, underscoring the complexity of the task.
 
