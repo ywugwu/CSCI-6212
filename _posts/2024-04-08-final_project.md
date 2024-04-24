@@ -80,9 +80,9 @@ Our current R2 scores are shown below:
 
 | Model                        | R² Score |
 |------------------------------|----------|
-| ConvNext Only                | 0.34     |
-| ConvNext + LightGBM          | 0.41     |
-| Ensemble with Varied Params  | 0.44     |
+| ConvNext Only                | 0.35     |
+| ConvNext + LightGBM          | 0.43     |
+| Ensemble with Varied Params  | 0.45     |
 
 We can see a significant improvement using different models/strategies, indicating further room for improvement by designing more powerful neural networks.
 
@@ -98,10 +98,10 @@ The convergence in the validation scores rather than a consistent decline sugges
 ### Leaderboard Ranking
 
 Our solution achieved:
-- 5th place out of 185 teams as of 22 Apr. (you may check the live ranking at [kaggle](https://www.kaggle.com/competitions/planttraits2024/leaderboard))
+- 5th place out of 194 teams as of 24 Apr. (you may check the live ranking at [kaggle](https://www.kaggle.com/competitions/planttraits2024/leaderboard))
 
- ![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/6970419f-6bb9-4fe1-8654-579cf20968a1)
 
+![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/34e18e4a-8bfb-46d9-817a-886efc1a71e7)
 
 
 ## 5. Tools and Resources
