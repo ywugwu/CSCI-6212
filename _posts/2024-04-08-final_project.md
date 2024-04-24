@@ -89,7 +89,13 @@ Our current R2 scores are shown below:
 
 We can see a significant improvement using different models/strategies, indicating further room for improvement by designing more powerful neural networks.
 
+We also observed an interesting phenomenon in our training process:
+
 ![image](https://github.com/ywugwu/ywugwu.github.io/assets/128890731/e6f5c515-f74e-4a43-8230-9b05d8883400)
+
+As the training epochs increase, the training score keeps increasing. However, the validation score doesn't decrease as the classic view of "overfitting" suggests.
+
+The convergence in the validation scores rather than a consistent decline suggests that while the model may be learning the training data better with each epoch, it's not necessarily overfitting in a manner that degrades its performance on unseen data.
 
 
 ### Leaderboard Ranking
@@ -107,10 +113,25 @@ Our solution achieved:
 - **Key Tools:** PyTorch and LightGBM for model building
 - **Inspirational Sources:** Existing literature on multimodal learning and previous entries in similar Kaggle competitions provided foundational ideas for our approach.
 
-## 6. References
+
+## 6. Future Work
+
+### High-resolution Training and Multi-scale Testing
+
+We observed that high-resolution images are quite helpful in this task. While we fail to gain improvement by improving training resolution from 384x384 to 512x512, we believe it's a promising direction and we would do more experiments to make it work.
+
+In addition, using multi-scale resolutions in the testing stage is an effective method for leveraging high-resolution information so we will accomplish it in the future.
+
+### More Powerful Vision Models and iNaturalist Pretrained-Models
+
+We aim to utilize more advanced vision models for improved feature extraction. 
+
+Additionally, we will consider models pretrained on the iNaturalist dataset to enhance species classification ability. These steps are expected to refine our model's performance further.
+
+
+## 7. References
 - [1]. Woo, Sanghyun, et al. "Convnext v2: Co-designing and scaling convnets with masked autoencoders." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.
 - [2]. Ke, Guolin, et al. "Lightgbm: A highly efficient gradient boosting decision tree." Advances in neural information processing systems 30 (2017).
 
-## 7. Future Work
-(Outline potential extensions or refinements of your project that could be explored to enhance performance or applicability.)
+
 
