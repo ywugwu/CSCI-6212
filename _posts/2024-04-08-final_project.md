@@ -80,8 +80,8 @@ Our current R2 scores are shown below:
 
 | Model                        | R² Score |
 |------------------------------|----------|
-| ConvNext Only                | 0.35     |
-| ConvNext + LightGBM          | 0.43     |
+| ConvNext Only (Coarse Prediction)               | 0.35     |
+| ConvNext + LightGBM (Fine-tuning Prediction)         | 0.43     |
 | Ensemble with Varied Params  | 0.45     |
 
 We can see a significant improvement using different models/strategies, indicating further room for improvement by designing more powerful neural networks.
