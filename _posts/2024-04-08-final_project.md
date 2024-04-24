@@ -16,17 +16,15 @@ An example input consists of an image of a plant along with its corresponding ge
 
 The table below presents statistical summaries for various plant trait measurements. Notably, the scale of the maximum values is significantly larger than the means, highlighting the wide range of the data. Also, the significantly high std values imply the challenge of predicting these traits accurately, as the models must be robust enough to handle such extremes without compromising performance on more typical values.
 
-| Statistic | X4_mean   | X11_mean    | X18_mean      | X26_mean      | X50_mean     | X3112_mean       |
-|-----------|-----------|-------------|---------------|---------------|--------------|------------------|
-| count     | 54465.0   | 54465.0     | 54465.0       | 54465.0       | 54465.0      | 54465.0          |
-| mean      | 0.523     | 134.713     | 20069.316     | 2952.970      | 13.746       | 404960.509       |
-| std       | 0.175     | 1.290179e+04| 2.331357e+06  | 2.110374e+05  | 1.369172e+03 | 9.238101e+07     |
-| min       | -2.431    | 0.0         | 0.005         | 0.001         | 0.060        | 0.000            |
-| 75%       | 0.622     | 25.282      | 11.319        | 78.965        | 2.495        | 4840.382         |
-| 90%       | 0.724     | 30.952      | 16.958        | 218.632       | 3.036        | 8175.111         |
-| 99%        | 0.920     | 51.096      | 28.565        | 1395.993      | 4.462        | 24695.882        |
-|   99.9%      | 1.444     | 618.885     | 197.034       | 9667.620      | 39.876       | 382357.825       |
-| max     | 4.475000e+00     | 1.504524e+06| 2.720494e+08  | 3.106555e+07  | 1.597959e+05 | 2.155919e+10     |
+
+| Statistic    | Min   | 0.01  | 0.05  | 0.25  | 0.5   | 0.75  | 0.95   | 0.99    | Max        |
+|-----------|-------|-------|-------|-------|-------|-------|--------|---------|------------|
+| X4_mean   | -1.16 | 0.23  | 0.30  | 0.41  | 0.51  | 0.62  | 0.80   | 0.91    | 2.62       |
+| X11_mean  | 0.02  | 3.10  | 4.97  | 10.81 | 15.28 | 20.13 | 33.25  | 52.75   | 27167.64   |
+| X18_mean  | 0.00  | 0.04  | 0.10  | 0.31  | 0.73  | 4.30  | 18.65  | 30.09   | 705177.70  |
+| X50_mean  | 0.00  | 0.48  | 0.74  | 1.15  | 1.47  | 1.92  | 2.98   | 4.38    | 218.29     |
+| X26_mean  | 0.00  | 0.01  | 0.05  | 0.58  | 2.65  | 16.84 | 257.58 | 1805.68 | 8920578.70 |
+| X3112_mean| 0.00  | 12.38 | 44.42 | 265.27| 793.31| 2296.86| 8871.99| 25810.43| 3145145.18 |
 
 
 ### Challenges: Implicit Requirement of Classification Ability
